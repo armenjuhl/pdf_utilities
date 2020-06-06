@@ -52,8 +52,6 @@ if __name__ == '__main__':
             complete_list[counter_b].append(i[1])
 
         counter_a += 1
-    # def create_ordered_dict(dictionary):
-    #     OrderedDict().append(i)
 
     merger('christmas_carols_1.pdf', complete_list[1])
     merger('christmas_carols_2.pdf', complete_list[2])

@@ -4,12 +4,9 @@ import tempfile
 from pdf2image import convert_from_path
 
 
-path = '12A Listen to the Mocking Bird'
+# path = '12A Listen to the Mocking Bird'
+# file_name = path[:-4]
 import_directory = '/Users/macbookpro/Downloads/group1Pdfs'
-file_name = path[:-4]
-# new_directory = f"/Users/macbookpro/Desktop/Clients/KRStringsWebsite/pdfScraper2.py/{file_name[2:]}Dir"
-
-
 output_filenames = dict()
 
 
@@ -22,19 +19,16 @@ def main():
 
                 try:
                     new_directory = f"/Users/macbookpro/Desktop/Clients/KRStringsWebsite/pdfScraper2.py/{new_file_name}".replace(' ', '')
-                    # new_directory = f"/Users/macbookpro/Desktop/Clients/KRStringsWebsite/pdfScraper2.py/{new_file_name[2:]}".replace(' ', '')
                     os.mkdir(new_directory)
                 except Exception:
                     pass
                 try:
                     pdf_directory = f"/Users/macbookpro/Desktop/Clients/KRStringsWebsite/pdfScraper2.py/{new_file_name}/PDF".replace(' ', '')
-                    # pdf_directory = f"/Users/macbookpro/Desktop/Clients/KRStringsWebsite/pdfScraper2.py/{file_name[2:]}/PDF".replace(' ', '')
                     os.mkdir(pdf_directory)
                 except Exception:
                     pass
                 try:
                     jpg_directory = f"/Users/macbookpro/Desktop/Clients/KRStringsWebsite/pdfScraper2.py/{new_file_name}/JPG".replace(' ', '')
-                    # jpg_directory = f"/Users/macbookpro/Desktop/Clients/KRStringsWebsite/pdfScraper2.py/{file_name[2:]}/JPG".replace(' ', '')
                     os.mkdir(jpg_directory)
                 except Exception:
                     pass
@@ -99,11 +93,11 @@ def extract_information(pdf_path):
         write_file = open(write_path, 'w')
         write_file.write(val)
 
-    # txt = f"""
-    # {pages}
-    # """
+    txt = f"""
+    {pages}
+    """
 
-    return
+    return txt
 
 
 if __name__ == '__main__':
